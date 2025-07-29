@@ -20,21 +20,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/certificates" element={<Certificates />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </div>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+);
+
+const AppContent = () => (
+  <div className="min-h-screen bg-background">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/achievements" element={<Achievements />} />
+      <Route path="/certificates" element={<Certificates />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    <Footer />
+  </div>
 );
 
 export default App;
