@@ -1,22 +1,24 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/afdcaec6-ae19-4f20-8e4e-1917fbcf6997
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features a clean design, smooth animations, and interactive components.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Modern UI with Tailwind CSS and Shadcn UI
+- Responsive design for all devices
+- Interactive animations and transitions
+- Project showcase section
+- Contact form with EmailJS integration
+- Dark/Light theme support
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/afdcaec6-ae19-4f20-8e4e-1917fbcf6997) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone this repository
+2. Install dependencies with `npm install`
+3. Start development server with `npm run dev`
+4. Build for production with `npm run build`
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +64,20 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/afdcaec6-ae19-4f20-8e4e-1917fbcf6997) and click on Share -> Publish.
+This project can be deployed to any hosting platform that supports static websites. Here are some recommended options:
 
-## Can I connect a custom domain to my Lovable project?
+1. **Vercel**
+   - Connect your GitHub repository
+   - Vercel will automatically deploy your site
+   - Get automatic deployments on every push
 
-Yes, you can!
+2. **Netlify**
+   - Connect your GitHub repository
+   - Configure build settings (`npm run build`)
+   - Enable automatic deployments
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. **GitHub Pages**
+   - Run `npm run build`
+   - Deploy the `dist` folder to GitHub Pages
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Each platform provides free hosting for personal projects and includes features like custom domains, SSL certificates, and continuous deployment.

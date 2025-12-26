@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowDown, Code, Sparkles } from 'lucide-react';
+import { ArrowDown, Code } from 'lucide-react';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,7 +21,7 @@ const Home = () => {
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-primary/20 rounded-full animate-pulse"
+            className=""
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -44,9 +44,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center animate-bounce">
-            <Sparkles className="w-6 h-6 text-background" />
-          </div>
+
         </div>
 
         {/* Name and Title */}
@@ -91,10 +89,7 @@ const Home = () => {
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </div>
+      
       </div>
     </div>
   );

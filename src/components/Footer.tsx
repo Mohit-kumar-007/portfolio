@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
@@ -12,6 +13,8 @@ const Footer = () => {
     { path: '/experience', label: 'EXPERIENCE' },
     { path: '/contact', label: 'CONTACT ME' },
   ];
+
+  // No scroll effect needed anymore
 
   const socialLinks = [
     {
@@ -32,20 +35,24 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer 
+      className="fixed bottom-0 left-[50%] translate-x-[-50%] z-50 
+                w-[95%] max-w-3xl mx-auto mb-4
+                bg-background/40 backdrop-blur-xl border border-border/50
+                rounded-[40px]
+                shadow-[0_0_15px_rgba(0,0,0,0.1)] dark:shadow-[0_0_15px_rgba(255,255,255,0.1)]
+                transition-colors duration-300">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between gap-4">
           {/* Navigation Links */}
-          <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          <nav className="flex items-center justify-center gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs font-medium transition-colors duration-200 hover:text-primary ${
-                  location.pathname === item.path
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
-                }`}
+                className={`text-xs font-medium transition-colors duration-200 hover:text-primary 
+                          ${location.pathname === item.path ? 'text-primary' : 'text-muted-foreground'}
+                          whitespace-nowrap`}
               >
                 {item.label}
               </Link>
